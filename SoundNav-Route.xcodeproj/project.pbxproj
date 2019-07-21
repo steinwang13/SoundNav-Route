@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3A57121577A683CA812C5E /* Pods_SoundNav_RouteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E518CE66E112BBD7BB214B4D /* Pods_SoundNav_RouteTests.framework */; };
 		400C9EA922E4E20100154013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EA822E4E20100154013 /* AppDelegate.swift */; };
 		400C9EAB22E4E20100154013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EAA22E4E20100154013 /* ViewController.swift */; };
 		400C9EAE22E4E20100154013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400C9EAC22E4E20100154013 /* Main.storyboard */; };
@@ -14,6 +15,10 @@
 		400C9EB322E4E20200154013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400C9EB122E4E20200154013 /* LaunchScreen.storyboard */; };
 		400C9EBE22E4E20200154013 /* SoundNav_RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EBD22E4E20200154013 /* SoundNav_RouteTests.swift */; };
 		400C9EC922E4E20200154013 /* SoundNav_RouteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EC822E4E20200154013 /* SoundNav_RouteUITests.swift */; };
+		406CF6F122E4E49D00AEDA5F /* bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 406CF6EF22E4E49C00AEDA5F /* bell.wav */; };
+		406CF6F222E4E49D00AEDA5F /* drumloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 406CF6F022E4E49D00AEDA5F /* drumloop.wav */; };
+		A608F863F20606966BEFCCE0 /* Pods_SoundNav_RouteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15DB3C72DF30D9B1C209181 /* Pods_SoundNav_RouteUITests.framework */; };
+		DE1016F59C35414DEB2AAABB /* Pods_SoundNav_Route.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579A182B42A52CCFD5E4080B /* Pods_SoundNav_Route.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		37F6B8D9791F758F46ECB541 /* Pods-SoundNav-RouteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundNav-RouteTests.debug.xcconfig"; path = "Target Support Files/Pods-SoundNav-RouteTests/Pods-SoundNav-RouteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3DAD644F6B700F87A20CB7C8 /* Pods-SoundNav-RouteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundNav-RouteUITests.debug.xcconfig"; path = "Target Support Files/Pods-SoundNav-RouteUITests/Pods-SoundNav-RouteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		400C9EA522E4E20100154013 /* SoundNav-Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundNav-Route.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		400C9EA822E4E20100154013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		400C9EAA22E4E20100154013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,15 @@
 		400C9EC422E4E20200154013 /* SoundNav-RouteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SoundNav-RouteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		400C9EC822E4E20200154013 /* SoundNav_RouteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundNav_RouteUITests.swift; sourceTree = "<group>"; };
 		400C9ECA22E4E20200154013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		406CF6EF22E4E49C00AEDA5F /* bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bell.wav; sourceTree = "<group>"; };
+		406CF6F022E4E49D00AEDA5F /* drumloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drumloop.wav; sourceTree = "<group>"; };
+		579A182B42A52CCFD5E4080B /* Pods_SoundNav_Route.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundNav_Route.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15DB3C72DF30D9B1C209181 /* Pods_SoundNav_RouteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundNav_RouteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD3B5EEA99D27AE35957F14C /* Pods-SoundNav-RouteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundNav-RouteTests.release.xcconfig"; path = "Target Support Files/Pods-SoundNav-RouteTests/Pods-SoundNav-RouteTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1F573552B6EB42FA23F057D /* Pods-SoundNav-RouteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundNav-RouteUITests.release.xcconfig"; path = "Target Support Files/Pods-SoundNav-RouteUITests/Pods-SoundNav-RouteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E518CE66E112BBD7BB214B4D /* Pods_SoundNav_RouteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundNav_RouteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE77BDFEEB1C643B8EB346ED /* Pods-SoundNav-Route.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundNav-Route.release.xcconfig"; path = "Target Support Files/Pods-SoundNav-Route/Pods-SoundNav-Route.release.xcconfig"; sourceTree = "<group>"; };
+		FC357B3E5953350BB60300A6 /* Pods-SoundNav-Route.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundNav-Route.debug.xcconfig"; path = "Target Support Files/Pods-SoundNav-Route/Pods-SoundNav-Route.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1016F59C35414DEB2AAABB /* Pods_SoundNav_Route.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3A57121577A683CA812C5E /* Pods_SoundNav_RouteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A608F863F20606966BEFCCE0 /* Pods_SoundNav_RouteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +100,8 @@
 				400C9EBC22E4E20200154013 /* SoundNav-RouteTests */,
 				400C9EC722E4E20200154013 /* SoundNav-RouteUITests */,
 				400C9EA622E4E20100154013 /* Products */,
+				44034941C5827BFA2043F956 /* Pods */,
+				EE6B80967F965B78987BFF0C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +120,8 @@
 			children = (
 				400C9EA822E4E20100154013 /* AppDelegate.swift */,
 				400C9EAA22E4E20100154013 /* ViewController.swift */,
+				406CF6EF22E4E49C00AEDA5F /* bell.wav */,
+				406CF6F022E4E49D00AEDA5F /* drumloop.wav */,
 				400C9EAC22E4E20100154013 /* Main.storyboard */,
 				400C9EAF22E4E20200154013 /* Assets.xcassets */,
 				400C9EB122E4E20200154013 /* LaunchScreen.storyboard */,
@@ -125,6 +148,29 @@
 			path = "SoundNav-RouteUITests";
 			sourceTree = "<group>";
 		};
+		44034941C5827BFA2043F956 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC357B3E5953350BB60300A6 /* Pods-SoundNav-Route.debug.xcconfig */,
+				EE77BDFEEB1C643B8EB346ED /* Pods-SoundNav-Route.release.xcconfig */,
+				37F6B8D9791F758F46ECB541 /* Pods-SoundNav-RouteTests.debug.xcconfig */,
+				CD3B5EEA99D27AE35957F14C /* Pods-SoundNav-RouteTests.release.xcconfig */,
+				3DAD644F6B700F87A20CB7C8 /* Pods-SoundNav-RouteUITests.debug.xcconfig */,
+				D1F573552B6EB42FA23F057D /* Pods-SoundNav-RouteUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE6B80967F965B78987BFF0C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				579A182B42A52CCFD5E4080B /* Pods_SoundNav_Route.framework */,
+				E518CE66E112BBD7BB214B4D /* Pods_SoundNav_RouteTests.framework */,
+				B15DB3C72DF30D9B1C209181 /* Pods_SoundNav_RouteUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 400C9ECD22E4E20200154013 /* Build configuration list for PBXNativeTarget "SoundNav-Route" */;
 			buildPhases = (
+				F7A59BB0E803CEAD6D2A39AD /* [CP] Check Pods Manifest.lock */,
 				400C9EA122E4E20100154013 /* Sources */,
 				400C9EA222E4E20100154013 /* Frameworks */,
 				400C9EA322E4E20100154013 /* Resources */,
+				CACFC928F13CD6F9FC46B4E3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 400C9ED022E4E20200154013 /* Build configuration list for PBXNativeTarget "SoundNav-RouteTests" */;
 			buildPhases = (
+				5FBB6377D108639CF9DAF654 /* [CP] Check Pods Manifest.lock */,
 				400C9EB522E4E20200154013 /* Sources */,
 				400C9EB622E4E20200154013 /* Frameworks */,
 				400C9EB722E4E20200154013 /* Resources */,
@@ -167,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 400C9ED322E4E20200154013 /* Build configuration list for PBXNativeTarget "SoundNav-RouteUITests" */;
 			buildPhases = (
+				A307C76C778768948610FD88 /* [CP] Check Pods Manifest.lock */,
 				400C9EC022E4E20200154013 /* Sources */,
 				400C9EC122E4E20200154013 /* Frameworks */,
 				400C9EC222E4E20200154013 /* Resources */,
@@ -193,6 +243,11 @@
 				TargetAttributes = {
 					400C9EA422E4E20100154013 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					400C9EB822E4E20200154013 = {
 						CreatedOnToolsVersion = 10.1;
@@ -229,9 +284,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				406CF6F222E4E49D00AEDA5F /* drumloop.wav in Resources */,
 				400C9EB322E4E20200154013 /* LaunchScreen.storyboard in Resources */,
 				400C9EB022E4E20200154013 /* Assets.xcassets in Resources */,
 				400C9EAE22E4E20100154013 /* Main.storyboard in Resources */,
+				406CF6F122E4E49D00AEDA5F /* bell.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +307,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FBB6377D108639CF9DAF654 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundNav-RouteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A307C76C778768948610FD88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundNav-RouteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CACFC928F13CD6F9FC46B4E3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoundNav-Route/Pods-SoundNav-Route-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoundNav-Route/Pods-SoundNav-Route-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoundNav-Route/Pods-SoundNav-Route-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7A59BB0E803CEAD6D2A39AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoundNav-Route-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		400C9EA122E4E20100154013 /* Sources */ = {
@@ -430,11 +573,13 @@
 		};
 		400C9ECE22E4E20200154013 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC357B3E5953350BB60300A6 /* Pods-SoundNav-Route.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQ45C5R6DN;
 				INFOPLIST_FILE = "SoundNav-Route/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,11 +593,13 @@
 		};
 		400C9ECF22E4E20200154013 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE77BDFEEB1C643B8EB346ED /* Pods-SoundNav-Route.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TQ45C5R6DN;
 				INFOPLIST_FILE = "SoundNav-Route/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +613,7 @@
 		};
 		400C9ED122E4E20200154013 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F6B8D9791F758F46ECB541 /* Pods-SoundNav-RouteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +635,7 @@
 		};
 		400C9ED222E4E20200154013 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD3B5EEA99D27AE35957F14C /* Pods-SoundNav-RouteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +657,7 @@
 		};
 		400C9ED422E4E20200154013 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DAD644F6B700F87A20CB7C8 /* Pods-SoundNav-RouteUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +678,7 @@
 		};
 		400C9ED522E4E20200154013 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1F573552B6EB42FA23F057D /* Pods-SoundNav-RouteUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
