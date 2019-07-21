@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		400C9EA922E4E20100154013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EA822E4E20100154013 /* AppDelegate.swift */; };
+		400C9EAB22E4E20100154013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EAA22E4E20100154013 /* ViewController.swift */; };
+		400C9EAE22E4E20100154013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400C9EAC22E4E20100154013 /* Main.storyboard */; };
+		400C9EB022E4E20200154013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400C9EAF22E4E20200154013 /* Assets.xcassets */; };
+		400C9EB322E4E20200154013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400C9EB122E4E20200154013 /* LaunchScreen.storyboard */; };
+		400C9EBE22E4E20200154013 /* SoundNav_RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EBD22E4E20200154013 /* SoundNav_RouteTests.swift */; };
+		400C9EC922E4E20200154013 /* SoundNav_RouteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EC822E4E20200154013 /* SoundNav_RouteUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		400C9EBA22E4E20200154013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 400C9E9D22E4E20100154013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 400C9EA422E4E20100154013;
+			remoteInfo = "SoundNav-Route";
+		};
+		400C9EC522E4E20200154013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 400C9E9D22E4E20100154013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 400C9EA422E4E20100154013;
+			remoteInfo = "SoundNav-Route";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		400C9EA522E4E20100154013 /* SoundNav-Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SoundNav-Route.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		400C9EA822E4E20100154013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		400C9EAA22E4E20100154013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		400C9EAD22E4E20100154013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		400C9EAF22E4E20200154013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		400C9EB222E4E20200154013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		400C9EB422E4E20200154013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		400C9EB922E4E20200154013 /* SoundNav-RouteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SoundNav-RouteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		400C9EBD22E4E20200154013 /* SoundNav_RouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundNav_RouteTests.swift; sourceTree = "<group>"; };
+		400C9EBF22E4E20200154013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		400C9EC422E4E20200154013 /* SoundNav-RouteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SoundNav-RouteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		400C9EC822E4E20200154013 /* SoundNav_RouteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundNav_RouteUITests.swift; sourceTree = "<group>"; };
+		400C9ECA22E4E20200154013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		400C9EA222E4E20100154013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400C9EB622E4E20200154013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400C9EC122E4E20200154013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		400C9E9C22E4E20100154013 = {
+			isa = PBXGroup;
+			children = (
+				400C9EA722E4E20100154013 /* SoundNav-Route */,
+				400C9EBC22E4E20200154013 /* SoundNav-RouteTests */,
+				400C9EC722E4E20200154013 /* SoundNav-RouteUITests */,
+				400C9EA622E4E20100154013 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		400C9EA622E4E20100154013 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				400C9EA522E4E20100154013 /* SoundNav-Route.app */,
+				400C9EB922E4E20200154013 /* SoundNav-RouteTests.xctest */,
+				400C9EC422E4E20200154013 /* SoundNav-RouteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		400C9EA722E4E20100154013 /* SoundNav-Route */ = {
+			isa = PBXGroup;
+			children = (
+				400C9EA822E4E20100154013 /* AppDelegate.swift */,
+				400C9EAA22E4E20100154013 /* ViewController.swift */,
+				400C9EAC22E4E20100154013 /* Main.storyboard */,
+				400C9EAF22E4E20200154013 /* Assets.xcassets */,
+				400C9EB122E4E20200154013 /* LaunchScreen.storyboard */,
+				400C9EB422E4E20200154013 /* Info.plist */,
+			);
+			path = "SoundNav-Route";
+			sourceTree = "<group>";
+		};
+		400C9EBC22E4E20200154013 /* SoundNav-RouteTests */ = {
+			isa = PBXGroup;
+			children = (
+				400C9EBD22E4E20200154013 /* SoundNav_RouteTests.swift */,
+				400C9EBF22E4E20200154013 /* Info.plist */,
+			);
+			path = "SoundNav-RouteTests";
+			sourceTree = "<group>";
+		};
+		400C9EC722E4E20200154013 /* SoundNav-RouteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				400C9EC822E4E20200154013 /* SoundNav_RouteUITests.swift */,
+				400C9ECA22E4E20200154013 /* Info.plist */,
+			);
+			path = "SoundNav-RouteUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		400C9EA422E4E20100154013 /* SoundNav-Route */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 400C9ECD22E4E20200154013 /* Build configuration list for PBXNativeTarget "SoundNav-Route" */;
+			buildPhases = (
+				400C9EA122E4E20100154013 /* Sources */,
+				400C9EA222E4E20100154013 /* Frameworks */,
+				400C9EA322E4E20100154013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SoundNav-Route";
+			productName = "SoundNav-Route";
+			productReference = 400C9EA522E4E20100154013 /* SoundNav-Route.app */;
+			productType = "com.apple.product-type.application";
+		};
+		400C9EB822E4E20200154013 /* SoundNav-RouteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 400C9ED022E4E20200154013 /* Build configuration list for PBXNativeTarget "SoundNav-RouteTests" */;
+			buildPhases = (
+				400C9EB522E4E20200154013 /* Sources */,
+				400C9EB622E4E20200154013 /* Frameworks */,
+				400C9EB722E4E20200154013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				400C9EBB22E4E20200154013 /* PBXTargetDependency */,
+			);
+			name = "SoundNav-RouteTests";
+			productName = "SoundNav-RouteTests";
+			productReference = 400C9EB922E4E20200154013 /* SoundNav-RouteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		400C9EC322E4E20200154013 /* SoundNav-RouteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 400C9ED322E4E20200154013 /* Build configuration list for PBXNativeTarget "SoundNav-RouteUITests" */;
+			buildPhases = (
+				400C9EC022E4E20200154013 /* Sources */,
+				400C9EC122E4E20200154013 /* Frameworks */,
+				400C9EC222E4E20200154013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				400C9EC622E4E20200154013 /* PBXTargetDependency */,
+			);
+			name = "SoundNav-RouteUITests";
+			productName = "SoundNav-RouteUITests";
+			productReference = 400C9EC422E4E20200154013 /* SoundNav-RouteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		400C9E9D22E4E20100154013 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = steinwang13;
+				TargetAttributes = {
+					400C9EA422E4E20100154013 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					400C9EB822E4E20200154013 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 400C9EA422E4E20100154013;
+					};
+					400C9EC322E4E20200154013 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 400C9EA422E4E20100154013;
+					};
+				};
+			};
+			buildConfigurationList = 400C9EA022E4E20100154013 /* Build configuration list for PBXProject "SoundNav-Route" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 400C9E9C22E4E20100154013;
+			productRefGroup = 400C9EA622E4E20100154013 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				400C9EA422E4E20100154013 /* SoundNav-Route */,
+				400C9EB822E4E20200154013 /* SoundNav-RouteTests */,
+				400C9EC322E4E20200154013 /* SoundNav-RouteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		400C9EA322E4E20100154013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400C9EB322E4E20200154013 /* LaunchScreen.storyboard in Resources */,
+				400C9EB022E4E20200154013 /* Assets.xcassets in Resources */,
+				400C9EAE22E4E20100154013 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400C9EB722E4E20200154013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400C9EC222E4E20200154013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		400C9EA122E4E20100154013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400C9EAB22E4E20100154013 /* ViewController.swift in Sources */,
+				400C9EA922E4E20100154013 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400C9EB522E4E20200154013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400C9EBE22E4E20200154013 /* SoundNav_RouteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400C9EC022E4E20200154013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400C9EC922E4E20200154013 /* SoundNav_RouteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		400C9EBB22E4E20200154013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 400C9EA422E4E20100154013 /* SoundNav-Route */;
+			targetProxy = 400C9EBA22E4E20200154013 /* PBXContainerItemProxy */;
+		};
+		400C9EC622E4E20200154013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 400C9EA422E4E20100154013 /* SoundNav-Route */;
+			targetProxy = 400C9EC522E4E20200154013 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		400C9EAC22E4E20100154013 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				400C9EAD22E4E20100154013 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		400C9EB122E4E20200154013 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				400C9EB222E4E20200154013 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		400C9ECB22E4E20200154013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		400C9ECC22E4E20200154013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		400C9ECE22E4E20200154013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ45C5R6DN;
+				INFOPLIST_FILE = "SoundNav-Route/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steinwang13.SoundNav-Route";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		400C9ECF22E4E20200154013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ45C5R6DN;
+				INFOPLIST_FILE = "SoundNav-Route/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steinwang13.SoundNav-Route";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		400C9ED122E4E20200154013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ45C5R6DN;
+				INFOPLIST_FILE = "SoundNav-RouteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steinwang13.SoundNav-RouteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundNav-Route.app/SoundNav-Route";
+			};
+			name = Debug;
+		};
+		400C9ED222E4E20200154013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ45C5R6DN;
+				INFOPLIST_FILE = "SoundNav-RouteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steinwang13.SoundNav-RouteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundNav-Route.app/SoundNav-Route";
+			};
+			name = Release;
+		};
+		400C9ED422E4E20200154013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ45C5R6DN;
+				INFOPLIST_FILE = "SoundNav-RouteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steinwang13.SoundNav-RouteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SoundNav-Route";
+			};
+			name = Debug;
+		};
+		400C9ED522E4E20200154013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TQ45C5R6DN;
+				INFOPLIST_FILE = "SoundNav-RouteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "steinwang13.SoundNav-RouteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "SoundNav-Route";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		400C9EA022E4E20100154013 /* Build configuration list for PBXProject "SoundNav-Route" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400C9ECB22E4E20200154013 /* Debug */,
+				400C9ECC22E4E20200154013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		400C9ECD22E4E20200154013 /* Build configuration list for PBXNativeTarget "SoundNav-Route" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400C9ECE22E4E20200154013 /* Debug */,
+				400C9ECF22E4E20200154013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		400C9ED022E4E20200154013 /* Build configuration list for PBXNativeTarget "SoundNav-RouteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400C9ED122E4E20200154013 /* Debug */,
+				400C9ED222E4E20200154013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		400C9ED322E4E20200154013 /* Build configuration list for PBXNativeTarget "SoundNav-RouteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400C9ED422E4E20200154013 /* Debug */,
+				400C9ED522E4E20200154013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 400C9E9D22E4E20100154013 /* Project object */;
+}
