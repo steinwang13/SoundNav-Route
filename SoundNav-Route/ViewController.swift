@@ -46,9 +46,17 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
     private typealias RouteRequestSuccess = (([Route]) -> Void)
     private typealias RouteRequestFailure = ((NSError) -> Void)
     
-    let audioMaster = AudioMaster()
-    let dataRecorder = DataRecorder()
+    let audioEngine = AVAudioEngine()
+    let audioEnvironment = AVAudioEnvironmentNode()
+    var soundSource: AVAudioPlayerNode?
+    
     var index = 0
+    
+    var data = [[String]]()
+    var row = [String]()
+    var speeds = [CLLocationSpeed]()
+    
+    var isRecording = false
     
     //MARK: - Lifecycle Methods
     override func viewDidLoad() {
@@ -61,12 +69,6 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         locationManager.startUpdatingHeading()
         locationManager.startUpdatingLocation()
         
-        setUpMapView()
-        
-        audioMaster.audioEngine.attach(audioMaster.audioEnvironment)
-    }
-    
-    func setUpMapView() {
         // Add MapView form Mapbox
         mapView = NavigationMapView(frame: view.bounds)
         mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -108,9 +110,11 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         startButton?.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
         startButton?.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         view.setNeedsLayout()
+        
+        audioEngine.attach(audioEnvironment)
     }
     
-    // Override layout lifecycle callback so we can style the start button
+    //overriding layout lifecycle callback so we can style the start button
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         startButton?.layer.cornerRadius = startButton!.bounds.midY
@@ -120,7 +124,7 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
     
     @objc func tappedButton(sender: UIButton) {
         guard let route = currentRoute else { return }
-        
+        // For demonstration purposes, simulate locations if the Simulate Navigation option is on.
         let navigationService = MapboxNavigationService(route: route, simulating: SimulationMode.onPoorGPS) // onPoorGPS
         let navigationOptions = NavigationOptions(navigationService: navigationService)
         let navigationViewController = NavigationViewController(for: route, options: navigationOptions)
@@ -129,7 +133,7 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         present(navigationViewController, animated: true, completion: nil)
         
         recordGivenRoute()
-        dataRecorder.isRecording = true
+        isRecording = true
     }
     
     func recordGivenRoute() {
@@ -140,7 +144,7 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
             }
             print("Finished reading given route into 2D string.")
         }
-        dataRecorder.recordGivenRoute(coordinates: givenRoute)
+        writeCSV(arrays: givenRoute, headers: ["ID", "Longitude", "Latitude"], filename: String("Route-GivenRoute.csv"))
     }
     
     @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
@@ -149,16 +153,36 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         let spot = gesture.location(in: mapView)
         guard let location = mapView?.convert(spot, toCoordinateFrom: mapView) else { return }
         
-        audioMaster.setSoundSourcePosition(location: location)
-        audioMaster.playSpatialSound()
+        // Long route destination: 51.4557931, -2.6108597 (a post box). Starting point: 51.4537456, -2.6050194
+        // Short route destination: 51.4534538, -2.6081318. Starting point: 51.4537456, -2.6050194
+        //        let longRouteDestination = CLLocationCoordinate2D(latitude: 51.4557931, longitude: -2.6108597)
+        //        let shortRouteDestination = CLLocationCoordinate2D(latitude: 51.4534538, longitude: -2.6081318)
         
-        requestRoute(destination: location)
-        dataRecorder.isRecording = false
+        audioEngine.stop()
+        
+        if self.routes != nil {
+            soundSource = self.createSoundSource("drumloop", atPosition: AVAudio3DPoint(x: Float((self.currentRoute?.coordinates![index].latitude)!), y: 0, z: Float((self.currentRoute?.coordinates![index].longitude)!)), volume: 5, options: .loops)
+        }
+        
+        audioEngine.connect(audioEnvironment, to: audioEngine.mainMixerNode, format: nil)
+        audioEngine.prepare()
+        
+        do {
+            try audioEngine.start()
+            soundSource?.play()
+            print("Started")
+        } catch let e as NSError {
+            print("Couldn't start engine", e)
+        }
+        
+        requestRoute(destination: location) //destination: longRouteDestination shortRouteDestination
+        isRecording = false
     }
     
     func requestRoute(destination: CLLocationCoordinate2D) {
         guard let userLocation = mapView?.userLocation!.location else { return }
-        let userWaypoint = Waypoint(location: userLocation, heading: mapView?.userLocation?.heading, name: "user")
+//        let startPoint = CLLocation(latitude: 51.4537456, longitude: -2.6050194)
+        let userWaypoint = Waypoint(location: userLocation, heading: mapView?.userLocation?.heading, name: "user") //location: startPoint
         let destinationWaypoint = Waypoint(coordinate: destination)
         
         let options = NavigationRouteOptions(waypoints: [userWaypoint, destinationWaypoint], profileIdentifier: MBDirectionsProfileIdentifier.walking)
@@ -182,25 +206,25 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         let lastLongitude = lastlocation?.coordinate.longitude
         let lastLatitude = lastlocation?.coordinate.latitude
         
-        // Get user's current location for setting up listener's position
         longitudeLabel?.text = lastLongitude?.description
         latitudeLabel?.text = lastLatitude?.description
         
-        audioMaster.setListenerPosition(x: Float(lastLatitude!), y: 0, z: Float(lastLongitude!))
+        audioEnvironment.listenerPosition = AVAudio3DPoint(x: Float(lastLatitude!), y: 0, z: Float(lastLongitude!))
         
-        // Find next waypoint when user arrive at a waypoint
         if self.routes != nil && index < (self.currentRoute?.coordinates?.count)! {
             let nextCoordinate = self.currentRoute?.coordinates![index]
             let distanceToNextCoordinate = nextCoordinate?.distance(to: (lastlocation?.coordinate)!)
+            //            print("Current Coordinate is: \(String(describing: nextCoordinate))")
             
             if distanceToNextCoordinate != nil {
-                audioMaster.setSoundSourcePosition(location: nextCoordinate!)
+                soundSource?.position = AVAudio3DPoint(x: Float(nextCoordinate!.latitude), y: 0, z: Float(nextCoordinate!.longitude))
                 
-                // Sound source jumps to next waypoint when the distance between user and upcoming waypoint is less than 10 meters
-                if Float((distanceToNextCoordinate?.description)!)! < 10 {
+                //                print("Distance To Next Coordinate: \(String(describing: distanceToNextCoordinate))")
+                if Float((distanceToNextCoordinate?.description)!)! < 20 {
                     index += 1
                     
-                    audioMaster.playWaypointSound()
+                    let reachCurrentCoordinateSoundSource = createSoundSource("bell", atPosition: audioEnvironment.listenerPosition, volume: 3, options: .interruptsAtLoop)
+                    reachCurrentCoordinateSoundSource.play()
                 }
             }
         }
@@ -209,17 +233,24 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         if Double(speed!) < 0 {
             speed = 0
         }
-        dataRecorder.speeds.append(speed!)
+        speeds.append(speed!)
+        
+        var avgSpeed: CLLocationSpeed {
+            return speeds.reduce(0,+)/Double(speeds.count)
+        }
         
         speedLabel?.text = speed?.description
-        avgSpeedLabel?.text = String(dataRecorder.avgSpeed)
+        avgSpeedLabel?.text = String(avgSpeed)
         
-        dataRecorder.addDataByRow(newRow: [Date().description, (lastLongitude?.description)!, (lastLatitude?.description)!, (speed?.description)!, String(dataRecorder.avgSpeed)])
+        if isRecording == true {
+            row = [Date().description, (lastLongitude?.description)!, (lastLatitude?.description)!, (speed?.description)!, String(avgSpeed)]
+            data.append(row)
+            
+            writeCSV(arrays: data, headers: ["Timestamp", "Longitude", "Latitude", "Speed(m/s)", "Avg. Speed(m/s)"], filename: String("Route-UserMotionLog.csv"))
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
-        
-        // Get user's current heading for setting up listener's orientation
         var lastheading = newHeading.trueHeading + 90
         if lastheading > 180 {
             lastheading -= 360
@@ -227,27 +258,80 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         
         headingLabel?.text = newHeading.trueHeading.description
         
-        audioMaster.setListenerOrientation(yaw: Float(lastheading), pitch: 0, row: 0)
+        audioEnvironment.listenerAngularOrientation = AVAudioMake3DAngularOrientation(Float(lastheading), 0, 0)
     }
     
     // Another idea: using simulation mode to get the moving guidance on the route.
-//    private func locationManager(_ manager: SimulatedLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        if currentRoute != nil {
-//            let simulatedLocationManager = MapboxNavigationService(route: currentRoute!).locationManager
-//            print("Simulated Longitude: \(String(describing: simulatedLocationManager.location?.coordinate.longitude.description))")
-//            print("Simulated Latitude: \(String(describing: simulatedLocationManager.location?.coordinate.latitude.description))")
-//        }
-//    }
+    //    private func locationManager(_ manager: SimulatedLocationManager, didUpdateLocations locations: [CLLocation]) {
+    //        if currentRoute != nil {
+    //            let simulatedLocationManager = MapboxNavigationService(route: currentRoute!).locationManager
+    //            print("Simulated Longitude: \(String(describing: simulatedLocationManager.location?.coordinate.longitude.description))")
+    //            print("Simulated Latitude: \(String(describing: simulatedLocationManager.location?.coordinate.latitude.description))")
+    //        }
+    //    }
     
-    // Play looping bell sound when user arrives at the destination.
+    func createSoundSource(_ file: String, withExtension ext: String = "wav", atPosition position: AVAudio3DPoint, volume: Float, options: AVAudioPlayerNodeBufferOptions) -> AVAudioPlayerNode {
+        let node = AVAudioPlayerNode()
+        node.position = position
+        node.reverbBlend = 0.1
+        node.renderingAlgorithm = .HRTF
+        node.volume = volume
+        
+        let url = Bundle.main.url(forResource: file, withExtension: ext)!
+        let file = try! AVAudioFile(forReading: url)
+        let buffer = AVAudioPCMBuffer(pcmFormat: file.processingFormat, frameCapacity: AVAudioFrameCount(file.length))
+        try! file.read(into: buffer!)
+        audioEngine.attach(node)
+        audioEngine.connect(node, to: audioEnvironment, format: buffer!.format)
+        node.scheduleBuffer(buffer!, at: nil, options: options, completionHandler: nil)
+        
+        return node
+    }
+    
+    // Show an alert when arriving at the waypoint and wait until the user to start next leg.
     func navigationViewController(_ navigationViewController: NavigationViewController, didArriveAt waypoint: Waypoint) -> Bool {
+        let reachSoundSource = createSoundSource("bell", atPosition: audioEnvironment.listenerPosition, volume: 3, options: .interrupts)
+        
+        reachSoundSource.play()
+        
         // End navigation
         navigationViewController.navigationService.endNavigation(feedback: nil)
-        audioMaster.playEndSound()
+        soundSource?.stop()
         
-        dataRecorder.isRecording = false
+        isRecording = false
         
         return false
+    }
+    
+    func writeCSV(arrays: [[String]], headers: [String], filename: String) {
+        let numCollumns = arrays.count
+        let numRows = arrays.first!.count
+        var output = "\(headers.joined(separator: ", "))\n"
+        
+        for r in 0...numCollumns-1 {
+            var row = ""
+            for c in 0...numRows-1 {
+                row = c == 0 ? arrays[r][c] : row.appending(",  \(arrays[r][c])")
+            }
+            output = output.appending("\(row)\n")
+        }
+        
+        let localDocumentsURL = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: .userDomainMask).last
+        let myLocalFile = localDocumentsURL?.appendingPathComponent(filename)
+        
+        guard myLocalFile != nil else {
+            print("----------- Couldn't create local file!")
+            return
+        }
+        
+        do {
+            try output.write(to: myLocalFile!, atomically: true, encoding: String.Encoding.utf8)
+        }
+        catch let error as NSError {
+            print(error.localizedDescription)
+            return
+        }
+        print("Wrote CSV to: \(myLocalFile!)")
     }
 }
 
