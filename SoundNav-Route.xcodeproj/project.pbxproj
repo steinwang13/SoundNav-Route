@@ -15,6 +15,8 @@
 		400C9EB322E4E20200154013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400C9EB122E4E20200154013 /* LaunchScreen.storyboard */; };
 		400C9EBE22E4E20200154013 /* SoundNav_RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EBD22E4E20200154013 /* SoundNav_RouteTests.swift */; };
 		400C9EC922E4E20200154013 /* SoundNav_RouteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400C9EC822E4E20200154013 /* SoundNav_RouteUITests.swift */; };
+		402D3B2C22F46A4B0080A9D1 /* AudioMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D3B2A22F46A4B0080A9D1 /* AudioMaster.swift */; };
+		402D3B2D22F46A4B0080A9D1 /* DataRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D3B2B22F46A4B0080A9D1 /* DataRecorder.swift */; };
 		406CF6F122E4E49D00AEDA5F /* bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 406CF6EF22E4E49C00AEDA5F /* bell.wav */; };
 		406CF6F222E4E49D00AEDA5F /* drumloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 406CF6F022E4E49D00AEDA5F /* drumloop.wav */; };
 		A608F863F20606966BEFCCE0 /* Pods_SoundNav_RouteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15DB3C72DF30D9B1C209181 /* Pods_SoundNav_RouteUITests.framework */; };
@@ -54,6 +56,8 @@
 		400C9EC422E4E20200154013 /* SoundNav-RouteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SoundNav-RouteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		400C9EC822E4E20200154013 /* SoundNav_RouteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundNav_RouteUITests.swift; sourceTree = "<group>"; };
 		400C9ECA22E4E20200154013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		402D3B2A22F46A4B0080A9D1 /* AudioMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMaster.swift; sourceTree = "<group>"; };
+		402D3B2B22F46A4B0080A9D1 /* DataRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRecorder.swift; sourceTree = "<group>"; };
 		406CF6EF22E4E49C00AEDA5F /* bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bell.wav; sourceTree = "<group>"; };
 		406CF6F022E4E49D00AEDA5F /* drumloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drumloop.wav; sourceTree = "<group>"; };
 		579A182B42A52CCFD5E4080B /* Pods_SoundNav_Route.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundNav_Route.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,8 @@
 		400C9EA722E4E20100154013 /* SoundNav-Route */ = {
 			isa = PBXGroup;
 			children = (
+				402D3B2A22F46A4B0080A9D1 /* AudioMaster.swift */,
+				402D3B2B22F46A4B0080A9D1 /* DataRecorder.swift */,
 				400C9EA822E4E20100154013 /* AppDelegate.swift */,
 				400C9EAA22E4E20100154013 /* ViewController.swift */,
 				406CF6EF22E4E49C00AEDA5F /* bell.wav */,
@@ -400,6 +406,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				400C9EAB22E4E20100154013 /* ViewController.swift in Sources */,
+				402D3B2D22F46A4B0080A9D1 /* DataRecorder.swift in Sources */,
+				402D3B2C22F46A4B0080A9D1 /* AudioMaster.swift in Sources */,
 				400C9EA922E4E20100154013 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
