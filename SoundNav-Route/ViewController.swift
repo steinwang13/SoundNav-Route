@@ -132,7 +132,7 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         
         present(navigationViewController, animated: true, completion: nil)
         
-        recordGivenRoute()
+//        recordGivenRoute()
         isRecording = true
     }
     
@@ -144,24 +144,24 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
             }
             print("Finished reading given route into 2D string.")
         }
-        writeCSV(arrays: givenRoute, headers: ["ID", "Longitude", "Latitude"], filename: String("Route-GivenRoute.csv"))
+        writeCSV(arrays: givenRoute, headers: ["ID", "Longitude", "Latitude"], filename: String("Short-GivenRoute.csv"))
     }
     
     @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
         guard gesture.state == .ended else { return }
         
-        let spot = gesture.location(in: mapView)
-        guard let location = mapView?.convert(spot, toCoordinateFrom: mapView) else { return }
+//        let spot = gesture.location(in: mapView)
+//        guard let location = mapView?.convert(spot, toCoordinateFrom: mapView) else { return }
         
-        // Long route destination: 51.4557931, -2.6108597 (a post box). Starting point: 51.4537456, -2.6050194
+        // Long route destination: 51.454952, -2.609714. Starting point: 51.4537456, -2.6050194
         // Short route destination: 51.4534538, -2.6081318. Starting point: 51.4537456, -2.6050194
-        //        let longRouteDestination = CLLocationCoordinate2D(latitude: 51.4557931, longitude: -2.6108597)
-        //        let shortRouteDestination = CLLocationCoordinate2D(latitude: 51.4534538, longitude: -2.6081318)
+//        let longRouteDestination = CLLocationCoordinate2D(latitude: 51.454952, longitude: -2.609714)
+        let shortRouteDestination = CLLocationCoordinate2D(latitude: 51.4534538, longitude: -2.6081318)
         
         audioEngine.stop()
         
         if self.routes != nil {
-            soundSource = self.createSoundSource("drumloop", atPosition: AVAudio3DPoint(x: Float((self.currentRoute?.coordinates![index].latitude)!), y: 0, z: Float((self.currentRoute?.coordinates![index].longitude)!)), volume: 5, options: .loops)
+            soundSource = self.createSoundSource("Constant-Brass", atPosition: AVAudio3DPoint(x: Float((self.currentRoute?.coordinates![index].latitude)!), y: 0, z: Float((self.currentRoute?.coordinates![index].longitude)!)), volume: 5, options: .loops)
         }
         
         audioEngine.connect(audioEnvironment, to: audioEngine.mainMixerNode, format: nil)
@@ -175,14 +175,14 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
             print("Couldn't start engine", e)
         }
         
-        requestRoute(destination: location) //destination: longRouteDestination shortRouteDestination
+        requestRoute(destination: shortRouteDestination) // longRouteDestination destination: location
         isRecording = false
     }
     
     func requestRoute(destination: CLLocationCoordinate2D) {
-        guard let userLocation = mapView?.userLocation!.location else { return }
-//        let startPoint = CLLocation(latitude: 51.4537456, longitude: -2.6050194)
-        let userWaypoint = Waypoint(location: userLocation, heading: mapView?.userLocation?.heading, name: "user") //location: startPoint
+//        guard let userLocation = mapView?.userLocation!.location else { return }
+        let startPoint = CLLocation(latitude: 51.4537456, longitude: -2.6050194)
+        let userWaypoint = Waypoint(location: startPoint, heading: mapView?.userLocation?.heading, name: "user") //location: userLocation
         let destinationWaypoint = Waypoint(coordinate: destination)
         
         let options = NavigationRouteOptions(waypoints: [userWaypoint, destinationWaypoint], profileIdentifier: MBDirectionsProfileIdentifier.walking)
@@ -246,7 +246,7 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
             row = [Date().description, (lastLongitude?.description)!, (lastLatitude?.description)!, (speed?.description)!, String(avgSpeed)]
             data.append(row)
             
-            writeCSV(arrays: data, headers: ["Timestamp", "Longitude", "Latitude", "Speed(m/s)", "Avg. Speed(m/s)"], filename: String("Route-UserMotionLog.csv"))
+            writeCSV(arrays: data, headers: ["Timestamp", "Longitude", "Latitude", "Speed(m/s)", "Avg. Speed(m/s)"], filename: String("Route-Short-UserMotionLog-1.csv"))
         }
     }
     
