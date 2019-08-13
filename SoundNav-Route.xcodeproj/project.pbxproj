@@ -20,6 +20,7 @@
 		402D3B2D22F46A4B0080A9D1 /* DataRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402D3B2B22F46A4B0080A9D1 /* DataRecorder.swift */; };
 		406CF6F122E4E49D00AEDA5F /* bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = 406CF6EF22E4E49C00AEDA5F /* bell.wav */; };
 		406CF6F222E4E49D00AEDA5F /* drumloop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 406CF6F022E4E49D00AEDA5F /* drumloop.wav */; };
+		4091295A23017EFD00FA37AD /* Bleep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4091295923017EFD00FA37AD /* Bleep.wav */; };
 		A608F863F20606966BEFCCE0 /* Pods_SoundNav_RouteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15DB3C72DF30D9B1C209181 /* Pods_SoundNav_RouteUITests.framework */; };
 		DE1016F59C35414DEB2AAABB /* Pods_SoundNav_Route.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 579A182B42A52CCFD5E4080B /* Pods_SoundNav_Route.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		402D3B2B22F46A4B0080A9D1 /* DataRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRecorder.swift; sourceTree = "<group>"; };
 		406CF6EF22E4E49C00AEDA5F /* bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bell.wav; sourceTree = "<group>"; };
 		406CF6F022E4E49D00AEDA5F /* drumloop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = drumloop.wav; sourceTree = "<group>"; };
+		4091295923017EFD00FA37AD /* Bleep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bleep.wav; sourceTree = "<group>"; };
 		579A182B42A52CCFD5E4080B /* Pods_SoundNav_Route.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundNav_Route.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15DB3C72DF30D9B1C209181 /* Pods_SoundNav_RouteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundNav_RouteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD3B5EEA99D27AE35957F14C /* Pods-SoundNav-RouteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundNav-RouteTests.release.xcconfig"; path = "Target Support Files/Pods-SoundNav-RouteTests/Pods-SoundNav-RouteTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				402D3B2B22F46A4B0080A9D1 /* DataRecorder.swift */,
 				400C9EA822E4E20100154013 /* AppDelegate.swift */,
 				400C9EAA22E4E20100154013 /* ViewController.swift */,
+				4091295923017EFD00FA37AD /* Bleep.wav */,
 				406CF6EF22E4E49C00AEDA5F /* bell.wav */,
 				406CF6F022E4E49D00AEDA5F /* drumloop.wav */,
 				400C9EAC22E4E20100154013 /* Main.storyboard */,
@@ -295,6 +298,7 @@
 			files = (
 				4002E9D122FB72F30015EF0E /* Constant-Brass.wav in Resources */,
 				406CF6F222E4E49D00AEDA5F /* drumloop.wav in Resources */,
+				4091295A23017EFD00FA37AD /* Bleep.wav in Resources */,
 				400C9EB322E4E20200154013 /* LaunchScreen.storyboard in Resources */,
 				400C9EB022E4E20200154013 /* Assets.xcassets in Resources */,
 				400C9EAE22E4E20100154013 /* Main.storyboard in Resources */,
